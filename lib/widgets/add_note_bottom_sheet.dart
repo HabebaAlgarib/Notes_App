@@ -28,7 +28,9 @@ class AddNote extends StatelessWidget {
             SizedBox(
               height: 100,
             ),
-            CustomBottom(),
+            CustomBottom(
+              title: 'Add',
+            ),
           ],
         ),
       ),
