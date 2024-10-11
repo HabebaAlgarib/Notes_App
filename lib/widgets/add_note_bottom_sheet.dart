@@ -22,7 +22,7 @@ class AddNote extends StatelessWidget {
               height: 15,
             ),
             CustomTextField(
-              title: 'Context',
+              title: 'Content',
               maxLines: 5,
             ),
             SizedBox(
