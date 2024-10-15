@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/helper/constants.dart';
 
 class CustomBottom extends StatelessWidget {
-  const CustomBottom({super.key, required this.title});
+  const CustomBottom({super.key, required this.title, this.onPressed});
   final String title;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +14,7 @@ class CustomBottom extends StatelessWidget {
         color: kPrimaryColor,
       ),
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           title,
           style: TextStyle(
