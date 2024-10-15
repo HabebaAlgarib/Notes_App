@@ -10,7 +10,7 @@ class CustomBottom extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: KPrimaryColor,
+        color: kPrimaryColor,
       ),
       child: MaterialButton(
         onPressed: () {},
