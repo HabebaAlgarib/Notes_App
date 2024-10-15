@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/helper/constants.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
     super.key,
     required this.title,
     this.maxLines = 1,
