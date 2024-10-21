@@ -11,6 +11,7 @@ class NotesListView extends StatelessWidget {
     Color(0xffe6e895),
     Color(0xff76d6ee),
     Color(0xffd79be1),
+    Color(0xffFFCC80),
   ];
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class NotesListView extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4.0),
                   child: NoteItem(
-                    noteColor: colors[index],
+                    note: notes[index],
                   ),
                 );
               }),
