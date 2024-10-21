@@ -8,7 +8,6 @@ class NoteItem extends StatelessWidget {
   final NoteModel note;
   @override
   Widget build(BuildContext context) {
-    DateTime parsedDate = DateTime.parse(note.date);
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -58,7 +57,7 @@ class NoteItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24.0),
               child: Text(
-                DateFormat('MMM d, yyyy').format(parsedDate),
+                note.date,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.5),
                   fontSize: 14,
