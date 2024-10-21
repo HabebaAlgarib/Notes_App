@@ -30,7 +30,7 @@ class CustomBottom extends StatelessWidget {
                 title,
                 style: const TextStyle(
                   color: Colors.black,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/edit_note_view.dart';
@@ -20,12 +19,12 @@ class NoteItem extends StatelessWidget {
       },
       child: Container(
         padding: const EdgeInsets.only(
-          left: 16,
-          top: 18,
-          bottom: 16,
+          left: 10,
+          top: 10,
+          bottom: 10,
         ),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           color: Color(note.color),
         ),
         child: Column(
@@ -40,11 +39,11 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               subtitle: Padding(
-                padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
+                padding: const EdgeInsets.only(top: 16.0, bottom: 10.0),
                 child: Text(
                   note.subtitle,
                   style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.black.withOpacity(0.4),
                     fontSize: 18,
                   ),
                 ),
@@ -62,7 +61,7 @@ class NoteItem extends StatelessWidget {
                 icon: const Icon(
                   Icons.delete,
                   color: Colors.black,
-                  size: 32,
+                  size: 28,
                 ),
               ),
             ),
@@ -71,7 +70,7 @@ class NoteItem extends StatelessWidget {
               child: Text(
                 note.date,
                 style: TextStyle(
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withOpacity(0.4),
                   fontSize: 14,
                 ),
               ),
