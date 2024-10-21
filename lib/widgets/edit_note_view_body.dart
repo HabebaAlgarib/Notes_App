@@ -22,7 +22,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8),
-      child: Column(
+      child: ListView(
         children: [
           const SizedBox(
             height: 40,
@@ -34,6 +34,11 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               widget.note.save();
               BlocProvider.of<NotesCubit>(context).fetchAllNote();
               Navigator.pop(context);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Note updated successfully'),
+                ),
+              );
             },
             icon: Icons.check,
             title: 'Edit Note',
