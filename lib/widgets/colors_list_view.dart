@@ -15,7 +15,7 @@ class ColorItem extends StatelessWidget {
             radius: 32,
             backgroundColor: Colors.white,
             child: CircleAvatar(
-              radius: 27,
+              radius: 24,
               backgroundColor: color,
             ),
           )
@@ -54,9 +54,12 @@ class _ColorsListViewState extends State<ColorsListView> {
                 BlocProvider.of<AddNoteCubit>(context).color = kColors[index];
                 setState(() {});
               },
-              child: ColorItem(
-                color: kColors[index],
-                isColorSelected: currentIndex == index,
+              child: Container(
+                width: 57,
+                child: ColorItem(
+                  color: kColors[index],
+                  isColorSelected: currentIndex == index,
+                ),
               ),
             ),
           );

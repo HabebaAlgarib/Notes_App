@@ -32,7 +32,6 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  backgroundColor: Colors.grey,
                   content: Text('Note updated successfully'),
                 ),
               );
