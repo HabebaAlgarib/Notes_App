@@ -16,6 +16,7 @@ class AddNoteButtomSheet extends StatelessWidget {
           if (state is AddNoteFailed) {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
+                backgroundColor: Colors.grey,
                 content: Text('Fail to add note'),
               ),
             );
@@ -25,6 +26,7 @@ class AddNoteButtomSheet extends StatelessWidget {
             Navigator.pop(context);
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
+                backgroundColor: Colors.grey,
                 content: Text('Note added successfully'),
               ),
             );

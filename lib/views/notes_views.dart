@@ -9,6 +9,7 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.grey.withOpacity(0.5),
         onPressed: () {
           showModalBottomSheet(
               isScrollControlled: true,
@@ -19,7 +20,11 @@ class NotesView extends StatelessWidget {
                 return const AddNoteButtomSheet();
               });
         },
-        child: const Icon(Icons.add),
+        child: Icon(
+          Icons.note_alt_outlined,
+          size: 27,
+          color: Colors.white.withOpacity(0.6),
+        ),
       ),
       body: const NotesViewBody(),
     );

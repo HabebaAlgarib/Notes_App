@@ -23,9 +23,6 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8),
       child: ListView(
         children: [
-          const SizedBox(
-            height: 40,
-          ),
           CustomAppBar(
             onPressed: () {
               widget.note.title = title ?? widget.note.title;
@@ -35,6 +32,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
+                  backgroundColor: Colors.grey,
                   content: Text('Note updated successfully'),
                 ),
               );
@@ -43,7 +41,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             title: 'Edit Note',
           ),
           const SizedBox(
-            height: 50,
+            height: 40,
           ),
           CustomTextFormField(
             onChanged: (value) {
@@ -59,7 +57,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             hint: widget.note.subtitle,
             maxLines: 5,
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 30),
           EditNoteColorsList(
             note: widget.note,
           ),
